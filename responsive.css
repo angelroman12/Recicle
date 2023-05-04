@@ -1,0 +1,47 @@
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px */
+    font-size: 56.25%;
+  }
+}
+
+/* 994px */
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px */
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 46em) {
+  .section {
+    padding: 1rem;
+  }
+  .hero-text {
+    width: 80%;
+    height: 70vh;
+  }
+  .subheading {
+    font-size: 2rem;
+  }
+  .contact-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-img img {
+    width: 80%;
+    margin: auto;
+  }
+  .hero {
+    height: 70vh;
+  }
+  .section-contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-customers ul {
+    padding-bottom: 3rem;
+  }
+}

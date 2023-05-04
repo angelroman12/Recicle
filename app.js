@@ -20,22 +20,19 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 headerObserver.observe(hero);
 
+const goToElement = function () {
+  this.scrollIntoView({ behavior: "smooth" });
+};
 // Scroll to hero
 
 const logoHeader = document
   .getElementById("logo")
-  .addEventListener("click", function () {
-    hero.scrollIntoView({ behavior: "smooth" });
-  });
+  .addEventListener("click", goToElement.bind(hero));
 
 // About us Btn
-
 const aboutUsBtn = document.getElementById("about-us-btn");
 const aboutUsSection = document.querySelector(".section-about-us");
-
-aboutUsBtn.addEventListener("click", function () {
-  aboutUsSection.scrollIntoView({ behavior: "smooth" });
-});
+aboutUsBtn.addEventListener("click", goToElement.bind(aboutUsSection));
 
 //  Navigation LINKS
 const listItems = document.querySelector(".list-items");
@@ -48,3 +45,8 @@ links.forEach((link) => {
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   });
 });
+
+const form = document.querySelector(".contact-form");
+const btnContact = document.querySelector(".btn-contact");
+
+btnContact.addEventListener("click", goToElement.bind(form));

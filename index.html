@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
     <title>Recicle</title>
   </head>
   <body>
@@ -28,7 +29,8 @@
           <li class="list-item"><a href="#our-crew"> Echipa noastra</a></li>
         </ul>
       </nav>
-      <button class="btn">Contactati-ne</button>
+      <button class="btn btn-contact">Contactati-ne</button>
+      <ion-icon name="menu" class="display-none"></ion-icon>
     </header>
 
     <main class="main">
@@ -62,14 +64,49 @@
       </section>
     </main>
 
-    <form class="contact-form">
-      <label for="name"
-        >Nume
-        <input type="text" id="name" />
-      </label>
-    </form>
+    <div class="section">
+      <h2 class="subheading">Contactati-ne</h2>
+    </div>
+    <div class="section section-contact">
+      <form class="contact-form">
+        <div class="form-control">
+          <label for="name"><ion-icon name="person"></ion-icon> Nume: </label>
+
+          <input type="text" id="name" />
+        </div>
+
+        <div class="form-control">
+          <label for="phone"> <ion-icon name="call"></ion-icon>Telefon:</label>
+
+          <input type="number" name="phone" id="phone" />
+        </div>
+
+        <div class="form-control">
+          <label for="email"> <ion-icon name="mail"></ion-icon>Email:</label>
+
+          <input type="email" name="email" id="email" />
+        </div>
+
+        <div class="form-control">
+          <label for="text">
+            <ion-icon name="document-text"></ion-icon>Mesaj:</label
+          >
+
+          <textarea name="text" id="text" cols="21" rows="10"></textarea>
+        </div>
+      </form>
+      <div class="contact-img">
+        <img src="./images/img-1.jpg" alt="forest" />
+      </div>
+    </div>
 
     <footer class="footer"></footer>
     <script src="./app.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
