@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Recicle</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h1 id="logo">EPCM</h1>
+      </div>
+      <nav class="nav">
+        <ul class="list-items">
+          <li class="list-item"><a href="#section-about-us"> Despre noi</a></li>
+          <li class="list-item"><a href="#our-crew"> Echipa noastra</a></li>
+        </ul>
+      </nav>
+      <button class="btn">Contactati-ne</button>
+    </header>
+
+    <main class="main">
+      <section class="section section-hero">
+        <div class="hero-text">
+          <h1>Recicleaza</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit vel
+            necessitatibus nam praesentium neque enim impedit sunt perspiciatis
+            adipisci beatae.
+          </p>
+          <button class="btn" id="about-us-btn">Despre noi &DownArrow;</button>
+        </div>
+      </section>
+
+      <section class="section section-customers">
+        <h2 class="subheading">Firme cu care am lucrat si ne recomanda</h2>
+        <ul class="list-items">
+          <li><img src="./images/logos/LOGO-colect-metal.jpg" alt="logo" /></li>
+          <li><img src="./images/logos/metinvest.png" alt="logo" /></li>
+          <li><img src="./images/logos/logo-remat-brasov.png" alt="logo" /></li>
+        </ul>
+      </section>
+
+      <section class="section section-about-us" id="section-about-us">
+        <h2 class="subheading">Despre noi</h2>
+      </section>
+
+      <section class="section our-crew" id="our-crew">
+        <h2 class="subheading">Echipa noastra</h2>
+      </section>
+    </main>
+
+    <form class="contact-form">
+      <label for="name"
+        >Nume
+        <input type="text" id="name" />
+      </label>
+    </form>
+
+    <footer class="footer"></footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
