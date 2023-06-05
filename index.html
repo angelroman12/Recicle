@@ -16,15 +16,26 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="" />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
     <title>Recicle</title>
   </head>
   <body>
     <header class="header">
       <div class="logo">
-        <h1 id="logo">EPCM</h1>
+        <h1 id="logo">EURO PIT</h1>
+        <p>0743924910</p>
       </div>
       <nav class="nav">
         <ul class="list-items">
+          <li class="list-item"><a href="#"> </a></li>
           <li class="list-item"><a href="#section-about-us"> Despre noi</a></li>
           <li class="list-item"><a href="#our-crew"> Echipa noastra</a></li>
         </ul>
@@ -36,12 +47,16 @@
     <main class="main">
       <section class="section section-hero">
         <div class="hero-text">
-          <h1>Recicleaza</h1>
+          <h1>NOI SUNTEM EURO PIT</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit vel
-            necessitatibus nam praesentium neque enim impedit sunt perspiciatis
-            adipisci beatae.
+            Liderul în reciclare durabilă.
+            <br />
+            Cu tehnologii de vârf și angajament neclintit față de mediu,
+            transformăm deșeurile în resurse valoroase. <br />
+            Alătură-te nouă în construirea unui viitor curat și verde. EURO Pit
+            - profesionalism și responsabilitate ecologică.
           </p>
+
           <button class="btn" id="about-us-btn">Despre noi &DownArrow;</button>
         </div>
       </section>
@@ -49,18 +64,65 @@
       <section class="section section-customers">
         <h2 class="subheading">Firme cu care am lucrat si ne recomanda</h2>
         <ul class="list-items">
-          <li><img src="./images/logos/LOGO-colect-metal.jpg" alt="logo" /></li>
-          <li><img src="./images/logos/metinvest.png" alt="logo" /></li>
-          <li><img src="./images/logos/logo-remat-brasov.png" alt="logo" /></li>
+          <li>
+            <img
+              src="./images/logos/LOGO-colect-metal.jpg"
+              alt="logo"
+              loading="lazy" />
+          </li>
+          <li>
+            <img src="./images/logos/metinvest.png" alt="logo" loading="lazy" />
+          </li>
+          <li>
+            <img
+              src="./images/logos/logo-remat-brasov.png"
+              alt="logo"
+              loading="lazy" />
+          </li>
         </ul>
       </section>
 
       <section class="section section-about-us" id="section-about-us">
         <h2 class="subheading">Despre noi</h2>
+        <p>
+          Bine ați venit la ReNewCo, liderul în furnizarea de soluții durabile
+          de reciclare. Cu o dedicare constantă față de protecția mediului și o
+          căutare neîntreruptă a progresului tehnologic, ne situăm în fruntea
+          industriei de reciclare. Angajamentul nostru ferm față de excelență,
+          împreună cu metodologiile noastre de ultimă generație, ne permite să
+          transformăm deșeurile în resurse valoroase cu cea mai mare eficiență.
+          Ca pionieri ai industriei, redefinim limitele sustenabilității,
+          oferind soluții de reciclare inovatoare și scalabile care răspund
+          provocărilor complexe ale lumii de astăzi. Alăturați-vă nouă într-o
+          călătorie către un viitor mai curat și mai verde, în care fiecare act
+          de reciclare contribuie la un planetă mai durabilă. Bine ați venit la
+          ReNewCo, unde profesionalismul se întâlnește cu conștiința ecologică.
+        </p>
       </section>
 
       <section class="section our-crew" id="our-crew">
         <h2 class="subheading">Echipa noastra</h2>
+        <p>
+          Echipa noastră de la ReNewCo este un grup dinamic de persoane
+          pasionate unite de un scop comun: de a promova schimbarea durabilă
+          prin reciclare. Cu expertiză în domenii diverse, de la știința
+          mediului la inginerie și logistică, echipa noastră aduce o bogată
+          cunoaștere și experiență în fiecare proiect pe care îl abordăm.
+          Angajați în inovație și îmbunătățire continuă, colaborăm strâns pentru
+          a dezvolta soluții de reciclare de vârf care au un impact tangibil
+          asupra mediului. Împreună, ne dedicăm creării unui viitor mai verde,
+          în care deșeurile sunt transformate în resurse valoroase. La ReNewCo,
+          echipa noastră este forța motrice în spatele succesului nostru și
+          catalizatorul pentru o schimbare pozitivă în industria de reciclare.
+        </p>
+
+        <p>
+          ReNewCo este o companie dedicată soluțiilor de reciclare durabilă, cu
+          un angajament ferm față de protecția mediului și construirea unui
+          viitor mai curat. Ne concentrăm pe inovație și tehnologie de vârf
+          pentru a transforma deșeurile în resurse valoroase, reducând astfel
+          impactul asupra mediului și contribuind la economia circulară.
+        </p>
       </section>
     </main>
 
@@ -95,12 +157,45 @@
           <textarea name="text" id="text" cols="21" rows="10"></textarea>
         </div>
       </form>
-      <div class="contact-img">
-        <img src="./images/img-1.jpg" alt="forest" />
-      </div>
+      <div id="map"></div>
     </div>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="date-contact">
+        <ul class="list-items">
+          <li class="list-item">
+            <ion-icon name="location-outline"></ion-icon>
+            <p>Centru de colectare: Iasi, Strada Trei Fantani, numarul 64</p>
+          </li>
+          <li>
+            <ion-icon name="leaf-outline"></ion-icon>
+            <p>
+              Birouri/Contabilitate: Iasi, Bulevardul Poitiers, Cladirea RVR,
+              Mezanin, Birou 2
+            </p>
+          </li>
+          <li>
+            <ion-icon name="person-outline"></ion-icon>
+            <p>Achitei Cosmin: 0749097690</p>
+          </li>
+          <li>
+            <ion-icon name="time-outline"></ion-icon>
+            <p>Luni-Vineri: 07:30 - 17:00</p>
+          </li>
+          <li>
+            <ion-icon name="mail-outline"></ion-icon>
+            <p>europitmetal@gmail.com</p>
+          </li>
+        </ul>
+      </div>
+      <div class="juridic">
+        <h5>EPCM</h5>
+        <p>S.C. Euro Pit Colect Metal S.R.L.</p>
+        <p>CUI RO 37551564</p>
+        <p>Nr. Reg. Com. Iasi J22/1276/2017</p>
+        <p>Autorizatie de mediu: 136/19.10.2021</p>
+      </div>
+    </footer>
     <script src="./app.js"></script>
     <script
       type="module"

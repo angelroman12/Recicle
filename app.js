@@ -50,3 +50,15 @@ const form = document.querySelector(".contact-form");
 const btnContact = document.querySelector(".btn-contact");
 
 btnContact.addEventListener("click", goToElement.bind(form));
+
+const divMap = document.querySelector("#map");
+
+var map = L.map("map").setView([47.144389, 27.644841], 15);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+  attribution:
+    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map);
+
+var marker = L.marker([47.139283, 27.644841]).addTo(map);
+marker.bindPopup("Depozitul nostru.").openPopup();
